@@ -1,6 +1,8 @@
 # Screenshot
 ![screenshot](https://user-images.githubusercontent.com/47615360/126083327-1bd10c39-b3ed-4b37-a534-a3c0d999b023.png)
 
+<h2>This project uses React, TypeScript, Material UI and Atomic design</h2>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
