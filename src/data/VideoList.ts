@@ -78,6 +78,6 @@ const videos = [
     avatar: '/images/avatar.jpeg',
     thumb: '/images/thumb8.jpg',
   },
-];
+]
 
-export default videos;
+export default videos

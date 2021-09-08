@@ -1,17 +1,12 @@
-import {
-  Toolbar,
-  Typography,
-  Box,
-  Grid
-} from '@material-ui/core';
+import { Toolbar, Typography, Box, Grid } from '@material-ui/core'
 
-import Videos from '../../atoms/videoList';
+import Videos from '../../data/VideoList'
 
 const VideoGrid: React.FC = () => {
   return (
     <Box p={8}>
       <Toolbar />
-      <Typography variant="h5" color="textPrimary" style={{ fontWeight: 600, marginBottom: 10 }}>
+      <Typography variant='h5' color='textPrimary' style={{ fontWeight: 600, marginBottom: 10 }}>
         Recomendados
       </Typography>
 
@@ -20,7 +15,7 @@ const VideoGrid: React.FC = () => {
           <Grid item lg={3} md={4} sm={6} xs={12} key={item.id}>
             <Box>
               <img
-                style={{ width: "100%" }}
+                style={{ width: '100%' }}
                 alt={item.title}
                 src={item.thumb}
               />
@@ -28,19 +23,19 @@ const VideoGrid: React.FC = () => {
                 <Typography
                   style={{ fontWeight: 600 }}
                   gutterBottom
-                  variant="body1"
-                  color="textPrimary"
+                  variant='body1'
+                  color='textPrimary'
                 >
                   {item.title}
                 </Typography>
                 <Typography
-                  display="block"
-                  variant="body2"
-                  color="textSecondary"
+                  display='block'
+                  variant='body2'
+                  color='textSecondary'
                 >
                   {item.channel}
                 </Typography>
-                <Typography variant="body2" color="textSecondary">
+                <Typography variant='body2' color='textSecondary'>
                   {`${item.views} • ${item.date}`}
                 </Typography>
               </Box>
@@ -49,7 +44,7 @@ const VideoGrid: React.FC = () => {
         ))}
       </Grid>
     </Box>
-  );
-};
+  )
+}
 
-export default VideoGrid;
+export default VideoGrid

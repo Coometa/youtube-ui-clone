@@ -1,12 +1,19 @@
-import { ThemeProvider, createTheme } from '@material-ui/core';
+import { ThemeProvider, createTheme } from '@material-ui/core'
 
-import Container from './components/templates/Container';
-import Home from './components/organisms/Home';
-import { useAuth } from './components/atoms/providers/Auth';
-import { IBackground, IAUth } from './components/atoms/interfaces';
+import Home from './pages/Home'
+import { useGlobalTheme } from './context/ThemeContext'
+
+import { IThemeState } from './interfaces/Global'
+import GlobalStyles from './styles/Global'
+
+interface IBackground {
+  dark: string
+  default: string
+  paper: string
+}
 
 const App: React.FC = () => {
-  const { darkMode } = useAuth() as IAUth;
+  const { darkMode } = useGlobalTheme() as IThemeState
 
   const theme = createTheme({
     spacing: 4,
@@ -24,15 +31,14 @@ const App: React.FC = () => {
         paper: darkMode ? '#232323' : '#FFF',
       } as IBackground,
     },
-  });
+  })
 
   return (
     <ThemeProvider theme={theme}>
-      <Container>
-        <Home />
-      </Container>
+      <Home />
+      <GlobalStyles theme={theme} />
     </ThemeProvider>
-  );
+  )
 }
 
-export default App;
+export default App

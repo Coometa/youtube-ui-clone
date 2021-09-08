@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import { AuthProvider } from './components/atoms/providers/Auth';
+import { GlobalThemeProvider } from './context/ThemeContext';
 import { CssBaseline } from '@material-ui/core';
 
 ReactDOM.render(
-  <AuthProvider>
+  <GlobalThemeProvider>
     <React.StrictMode>
       <CssBaseline />
       <App />
     </React.StrictMode>
-  </AuthProvider>,
+  </GlobalThemeProvider>,
   document.getElementById('root')
 );
